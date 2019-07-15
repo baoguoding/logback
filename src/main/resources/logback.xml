@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration debug="false" scan="true" scanPeriod="300 seconds">
+<!-- scanPeriod 重新加载日志配置的时间间隔 -->
+<configuration debug="false" scan="true" scanPeriod="5 seconds">
 	<timestamp key="date" datePattern="yyyyMMdd" />
 	<!-- Output to Console -->
 	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
@@ -28,6 +29,10 @@
 		<appender-ref ref="Console" />
 		<appender-ref ref="File" />
 	</root>
-<!--	<logger name="org.springframework" level="WARN" />-->
-	<logger name="com.baoguoding" level="INFO" />
+	<!-- 可以将下面的任意行注释，观察效果-->
+	<logger name="com.baoguoding.logback.trace" level="TRACE" />
+	<logger name="com.baoguoding.logback.debug" level="DEBUG" />
+	<logger name="com.baoguoding.logback.info" level="INFO" />
+	<logger name="com.baoguoding.logback.warn" level="WARN" />
+	<logger name="com.baoguoding.logback.error" level="ERROR" />
 </configuration>
