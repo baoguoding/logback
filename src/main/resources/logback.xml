@@ -29,5 +29,5 @@
 		<appender-ref ref="File" />
 	</root>
 <!--	<logger name="org.springframework" level="WARN" />-->
-	<logger name="com.baoguoding" level="DEBUG" />
+	<logger name="com.baoguoding" level="INFO" />
 </configuration>
